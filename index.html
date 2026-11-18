@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Listen &amp; Find</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start -->
+  <section id="start" class="screen">
+    <h1>🎧 Listen &amp; Find</h1>
+    <p class="hint">Choose a topic</p>
+    <div id="topics" class="topics"></div>
+  </section>
+
+  <!-- Game -->
+  <section id="game" class="screen hidden">
+    <header class="bar">
+      <div class="stat">⭐ <span id="score">0</span></div>
+      <div class="stat">⏱️ <span id="time">00:00</span></div>
+      <div class="stat"><span id="round">1</span>/9</div>
+    </header>
+    <div class="target">
+      <span id="word"></span>
+      <button id="speak" class="icon" title="Listen again">🔊</button>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <!-- Result -->
+  <section id="result" class="screen hidden">
+    <h1>🎉 Well done!</h1>
+    <div class="summary">
+      <div>⭐ Score: <b id="final-score"></b> / 90</div>
+      <div>⏱️ Time: <b id="final-time"></b></div>
+    </div>
+    <div class="actions">
+      <button id="again" class="btn">Play again</button>
+      <button id="change" class="btn alt">Change topic</button>
+    </div>
+  </section>
+
+  <script src="data/words.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
